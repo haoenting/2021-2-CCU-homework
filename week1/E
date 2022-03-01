@@ -1,0 +1,20 @@
+n =int(input())
+x = input().split( )
+
+def isPrime(num):
+    prime = True
+    if num % 2==0 and num != 2:
+        prime = False
+    elif num == 1:
+        prime = False
+    else:
+        y = 3
+        while y <= num:
+            if num % y == 0 and num != y :
+                prime = False
+                break
+            y += 2
+    print(prime)
+
+for i in range(0,n):
+    isPrime(int(x[i]))
