@@ -1,29 +1,26 @@
-IZE = 1000000000
-n =int(input())
-x = input().split( )
-ary = list()
-prime = list()
-ary[1] = False
-i = 2
-num =0
-while i < SIZE:
-    if ary[i] == None:
-        prime[num] = True
-        num += 1
-        j = 2
-        while i*j < SIZE:
-            ary[i*j] = False
-            j += 1
+import numpy as np
+n,m,r = map(int,input().split( ))
+np1 = np.empty((n,m))
+np2 = np.empty((m,r))
+count = 0
+while count < n:
+    np1[count] = input().split( )
+    count += 1
+count = 0 
+while count < m:
+    np2[count] = input().split( )
+    count += 1
 
-
-def isPrime(x):
-    end = False
-    n = 0
-    while n < num:
-        if prime[n] == num:
-            end = True
-            break
-    print(end)
-
-for i in range(0,n):
-    isPrime(int(x[i]))
+N = 0
+while N < n:
+    R = 0
+    while R < r:
+        num = 0
+        M = 0
+        while M < m:
+            num += np1[N][M]*np2[M][R] 
+            M += 1
+        print(int(num))
+        R += 1
+    N += 1
+    
