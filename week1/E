@@ -13,7 +13,7 @@ while i < SIZE:
             count = i*j
     i += 1
 
-
+ary[1] = 1
 def isPrime(num):
     boo = 0
     if num >= SIZE :
