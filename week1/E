@@ -1,20 +1,37 @@
-n =int(input())
-x = input().split( )
+SIZE = 100005
+ary = [0] * SIZE
+primes = list()
+i = 2
+while i < SIZE:
+    if ary[i] == 0:
+        primes.append(i)
+        j = 2
+        count = j*i
+        while  count < SIZE:
+            ary[count] = 1
+            j += 1
+            count = i*j
+    i += 1
+
 
 def isPrime(num):
-    prime = True
-    if num % 2==0 and num != 2:
-        prime = False
-    elif num == 1:
-        prime = False
-    else:
-        y = 3
-        while y <= num:
-            if num % y == 0 and num != y :
-                prime = False
+    boo = 0
+    if num >= SIZE :
+        for total in range(len(primes)+1):
+            if num % primes[total] == 0:
+                boo = 1
                 break
-            y += 2
-    print(prime)
+    else:
+        boo = ary[num]
+    
+    if boo == 1:
+        print(False)
+    else:
+        print(True)
 
+n = int(input())
+x = input().split( )
+
+i = 0
 for i in range(0,n):
     isPrime(int(x[i]))
