@@ -9,7 +9,7 @@ ans.sort()
 for i in range(len(ans)):
     sum = 0
     for j in range(len(ary)):
-        if ans[i] in ary[j]:
+        if ans[i] == ary[j]:
             sum += 1
 
     print(ans[i],sum)
