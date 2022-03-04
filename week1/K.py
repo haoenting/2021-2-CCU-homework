@@ -1,12 +1,11 @@
-
-x,y = list(input().split( ))
+x,y = input().split( )
 y = y.lower()
 
 i,j = 0,0
 while i < len(x):
     num = ord(x[i]) + ord(y[j]) - 97
 
-    if ord(x[i]) < 91 and num > 91:
+    if ord(x[i]) < 91 and num > 90:
         num -= 26
     if num > 122:
         num -= 26
