@@ -18,7 +18,10 @@ def turn(x,y):
 
     ary.reverse()
     for i in range(len(ary)):
-        print(str(ary[i]),end = '')
+        print(ary[i],end = '')
+
+    print("\n")
+
 
 for line in sys.stdin:
     a,b = line.split( )
