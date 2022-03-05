@@ -12,7 +12,6 @@ def books(i):
     Code.append(input())
     Price.append(input())
     
-
 def search(line,num):
     print("case ",num,":",sep ='')
     found = False
@@ -39,4 +38,3 @@ for line in sys.stdin:
     num += 1
     line = line.lower()
     search(line,num)
-    
