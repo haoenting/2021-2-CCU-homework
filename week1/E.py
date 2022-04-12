@@ -41,6 +41,3 @@ n = int(input())
 num = input().split( )
 for j in range(n):
     isPrime(int(num[j]))
-
-for i in range(0,n):
-    isPrime(int(x[i]))
